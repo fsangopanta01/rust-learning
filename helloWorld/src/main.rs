@@ -1,4 +1,6 @@
 fn main() {
+    basics();
+
     let s = String::from("hello world");
     let y = take_property(s);
     println!("Original chain {}", y);
