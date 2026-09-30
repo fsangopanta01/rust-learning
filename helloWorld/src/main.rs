@@ -1,4 +1,44 @@
 fn main() {
+    let s = String::from("hello world");
+    let y = take_property(s);
+    println!("Original chain {}", y);
+
+    let (original, size) = calculate_length(y);
+    println!("Original chain {}", original);
+    println!("Size {}", size);
+
+    // Refences
+    let z = String::from("hello world");
+    let size = calculate_length_reference(&z);
+
+    println!("Original chain {}", z);
+    println!("Size {}", size);
+    // Mutable references
+    let mut chain = String::from("hello world");
+    modify(&mut chain);
+    println!("Mutable chain {}", chain);
+
+}
+
+fn modify(chain: &mut String) {
+    chain.push_str("push string")
+}
+
+fn take_property(chain: String) -> String {
+    println!("take_property chain: {}", chain);
+    chain
+}
+
+fn calculate_length_reference(chain: &String) -> usize {
+    chain.len()
+}
+
+fn calculate_length(chain: String) -> (String, usize) {
+    let aux = chain.len();
+    (chain, aux)
+}
+
+fn basics() {
     // By default, variable is not mutable
     let x = 3;
     println!("Value vor non mutable variable: {} ", x);
@@ -89,7 +129,6 @@ fn main() {
         println!("{}", numero);
     }
 }
-
 fn sum(a: i32, b: i32) -> i32 {
     a + b
 }
