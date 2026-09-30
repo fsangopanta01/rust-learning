@@ -66,6 +66,11 @@ fn main() {
         println!("Number is not less than 5 and five");
     }
 
+    let matriz = [1,2,34,45,2,45,456,56,345,5];
+
+    for numero in matriz.iter() {
+        println!("{}", numero);
+    }
 }
 
 fn sum(a: i32, b: i32) -> i32 {
