@@ -49,7 +49,6 @@ fn main() {
     let arr = [3; 5];
     // let arr = [3,3,3,3,3]; --> Equivalent
 
-
     // Conditionals
     let number = 10;
 
@@ -66,9 +65,27 @@ fn main() {
         println!("Number is not less than 5 and five");
     }
 
-    let matriz = [1,2,34,45,2,45,456,56,345,5];
+    let matriz = [1, 2, 34, 45, 2, 45, 456, 56, 345, 5];
 
+    // Traditional loop
     for numero in matriz.iter() {
+        println!("{}", numero);
+    }
+
+    // Range for
+    for numero in 1..10 {
+        println!("{}", numero);
+    }
+
+    // Range for inclusive
+
+    for numero in 1..=10 {
+        println!("{}", numero);
+    }
+
+    // Range for reverse
+    println!("Reverse for loop");
+    for numero in (1..10).rev() {
         println!("{}", numero);
     }
 }
